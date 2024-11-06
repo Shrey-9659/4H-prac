@@ -3,8 +3,13 @@ import React, { useState } from "react";
 const Register = () => {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
-  const handleSubmit = () => {
-    // Logic
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    await fetch("http://localhost:5050/register", {
+      method : "POST",
+      headers : {"Content-Type": "application/json"},
+      body : JSON.stringify({username : userName, password})
+    })
   }
   return (
     <div>
