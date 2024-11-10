@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const PORT = 5050;
 const cors = require("cors");
-const MONGO_URI = "mongodb://localhost:27017/mydatabase";
+const MONGO_URI = "mongodb+srv://shreykhandelwal9659:KnNVUte4SRMx4E8n@cluster0.si9xs.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 mongoose
   .connect(MONGO_URI)
