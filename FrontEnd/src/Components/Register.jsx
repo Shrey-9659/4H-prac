@@ -5,7 +5,7 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await fetch("http://localhost:5050/register", {
+    await fetch("https://4-h-prac.vercel.app/register", {
       method : "POST",
       headers : {"Content-Type": "application/json"},
       body : JSON.stringify({username : userName, password})
